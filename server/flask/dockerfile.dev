@@ -6,6 +6,7 @@ COPY /. /app
 WORKDIR /app
 
 # 환경변수 설정
+# requirements의 env.cfg 설정
 ENV FLASK_APP "manage:application"
 ENV FLASK_CONFIG "development"
 ENV FLASK_ENV "development"
