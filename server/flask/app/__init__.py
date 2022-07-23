@@ -4,6 +4,7 @@ from app import api
 """ api (blueprints) """
 from app.api.index import index
 from app.api.error_handler import error_handler
+from app.api.user import user
 def create_flask_app(config):
     # application factory 생성
     app = Flask(
@@ -27,5 +28,5 @@ def create_flask_app(config):
 
     app.register_blueprint(index.bp)
     app.register_blueprint(error_handler.bp)
-
+    app.register_blueprint(user.bp)
     return app
